@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流布局</title>
+    <link rel="stylesheet" href="../CSS/02.css">
+</head>
+<body>
+<div class="container" id="app">
+    <div class="item" v-for="item in 5" :key="item">
+        <img :src="'../images/' + item + '.jpeg'" alt="">
+    </div>
+    <div class="item" v-for="item in 30" :key="item">
+        <img :src="'../images/' + item + '.webp'" alt="">
+    </div>
+</div>
+<script src="../JS/vue.js"></script>
+<script >
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+    })
+</script>
+</body>
+</html>

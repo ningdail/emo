@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #2b2876;
+            animation: a1 10s linear infinite;
+        }
+        .son{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            left: 0;
+            /*绝对定位相对于相对定位的位置是从内容开始*/
+            top: 0;
+
+            text-align: center;
+            line-height: 200px;
+            animation: a2 10s linear infinite;
+        }
+        @keyframes a1 {
+            to{
+                transform: rotate(360deg);
+            }
+        }@keyframes a2 {
+             to{
+                 transform: rotate(-360deg);
+             }
+         }
+
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">嗨嗨嗨</div>
+</div>
+</body>
+</html>

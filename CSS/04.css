@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #2b2876, #09203f);
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-top: 10px solid #63a69f;
+    box-shadow: 0 0 5px #63a69f,
+    0 0 10px #63a69f,
+    0 0 15px #63a69f;
+    box-sizing: border-box;
+    animation: rotate 2s linear infinite;
+}
+.box::before,.box::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    /*绝对定位相对于相对定位的位置是从内容开始*/
+    top: -10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.box::before{
+    border-top: 10px solid #f2e1ac;
+    box-shadow: 0 0 5px #f2e1ac,
+    0 0 10px #f2e1ac,
+    0 0 15px #f2e1ac;
+    transform: rotate(120deg);
+}
+.box::after{
+    border-top: 10px solid #f2836f;
+    box-shadow: 0 0 5px #f2836f,
+    0 0 10px #f2836f,
+    0 0 15px #f2836f;
+    transform: rotate(240deg);
+}
+span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    animation: a1 2s linear infinite;
+
+}
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes a1 {
+    to{
+        transform: rotate(-360deg);
+    }
+}

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body {
+    background-color: #0e141b;
+    color: #e0e6eb;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 8px;
+    overflow: hidden;
+    font-family: "jura";
+}
+.colon,
+.column {
+    display: inline-block;
+    font-size: 86px;
+    line-height: 86px;
+    /*顶部对齐*/
+    vertical-align: top;
+}
+.column{
+    transition: 0.3s;
+}
+.colon{
+    transition: 0.3s;
+    transform: translateY(calc(50vh - 50px));
+}
+.colon::after{
+    content: ':';
+}
+.num{
+    opacity: 0.25;
+    transition: 0.5s;
+}
+/*当前时间*/
+.num.visible{
+    opacity: 1;
+    text-shadow: 1px 1px 0 #2c6299;
+}
+.num.near{
+    opacity: 0.35;
+}
+.num.far{
+    opacity: 0.1;
+}
+.num.distant{
+    opacity: 0.1;
+}
